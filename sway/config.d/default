@@ -1,0 +1,34 @@
+# Logo key. Use Mod1 for Alt.
+set $mod Mod4
+
+# Your preferred terminal emulators
+set $term-float foot
+
+# Your preferred application launcher
+# Note: pass the final command to swaymsg so that the resulting window can be opened
+# on the original workspace that the command was run on.
+set $menu wofi -c ~/.config/wofi/config -I
+
+set $powermenu ~/.config/waybar/scripts/power-menu.sh
+
+### Key bindings
+#
+# Basics:
+#
+    # Start a floating terminal
+    bindsym $mod+Return exec $term-float
+
+    # Open the power menu
+    bindsym $mod+Shift+e exec $powermenu
+
+    # Start your launcher
+    bindsym $mod+d exec $menu
+
+    # Activities
+    bindsym $mod+p exec ~/.config/wofi/windows.py
+
+#
+# Screenshots
+#
+    bindsym print exec /usr/share/sway/scripts/grimshot --notify save output
+    bindsym Shift+print exec ~/.config/sway/scripts/screenshot.sh

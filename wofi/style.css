@@ -1,0 +1,50 @@
+@define-color highlight #EDEDED;
+@define-color text_color #EDEDED;
+@define-color base1  #0F0F0F;
+@define-color base2 #000000; /* Background near borders */
+@define-color base3  #000000; /* Pattern */
+@define-color test  #2dc71f;
+
+*{
+    font-family: UbuntuMono;
+    font-size: 13px;
+}
+
+window {
+    border: 2px solid @highlight;
+    border-radius: 10px;
+    background-color: @base2;
+}
+
+#input {
+    margin-bottom: 15px;
+    padding: 0em 5px;
+    border-radius: 5px;
+    border: 2px solid @highlight;
+    background-color: @base1;
+    color: @text_color;
+}
+
+#inner-box {
+    background-color: @base3;
+}
+
+#outer-box {
+    margin: 5px;
+    padding:15px;
+    background-color: @base2;
+}
+
+#text {
+    padding: 5px;
+    color: @text_color;
+}
+
+#entry:selected {
+    background-color: @highlight;
+}
+
+#selected #text, #selected #img {
+    color: #000000;
+    background-color: @hightlight;
+}
